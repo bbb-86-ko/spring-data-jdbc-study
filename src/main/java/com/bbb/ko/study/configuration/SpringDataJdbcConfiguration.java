@@ -25,7 +25,11 @@ public class SpringDataJdbcConfiguration extends AbstractJdbcConfiguration {
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         return builder.setType(EmbeddedDatabaseType.H2)
-                .addScript("create-customer-schema.sql")
+                .addScripts(
+                        "create-customer-schema.sql"
+                        , "create-order-schema.sql"
+                        , "create-book-schema.sql"
+                )
                 .build();
     }
 
