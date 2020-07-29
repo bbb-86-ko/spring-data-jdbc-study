@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS CUSTOMER;
+CREATE TABLE CUSTOMER (
+  id         IDENTITY,
+  first_name VARCHAR(200),
+  dob        DATE
+);
